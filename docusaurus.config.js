@@ -24,7 +24,6 @@ const config = {
   
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -42,15 +41,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -59,10 +56,10 @@ const config = {
           changefreq: 'daily',
           priority: 0.5,
         },
-        gtag: {
+        /* gtag: {
           trackingID: 'G-S4SD5NXWXF',
           anonymizeIP: true,
-        },
+        }, */
       }),
     ],
   ],
@@ -73,7 +70,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Wicked Blog',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -83,12 +80,49 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '小工具',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            label: "博客",
+            position: "right",
+            to: "/blog",
+          },
+          {
+            label: "学习笔记",
+            position: "right",
+            to: "/blog",
+          },
+          {
+            label: "资源站",
+            position: "right",
+            to: "/blog",
+          },
+          {
+            label: "小工具",
+            position: "right",
+            to: "/blog",
+          },
+          {
+            label: '更多',
+            position: 'right',
+            items: [
+              { label: '归档', to: '/blog' },
+              { label: '笔记', to: '/blog' },
+              { label: '友链', to: '/blog' },
+              { label: '工具推荐', to: '/blog' },
+            ],
+          },
+          {
+            label: "链接",
+            position: "right",
+            items: [
+              { label: 'vue blog', href: 'https://closerdoor.github.io/vuepress-blog/' },
+              { label: 'md blog', href: 'https://closerdoor.github.io/docsify_blog/' },
+            ],
+          },
+          {
             label: 'GitHub',
+            href: 'https://github.com/Closerdoor/docusaurus-blog',
             position: 'right',
           },
         ],
